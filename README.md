@@ -33,8 +33,6 @@ This is the website to show my skills and projects.
 
 - [Content]: World Heritage List
 - [HTML] : This is a Markup Language use to achieve the project
-- [Development] : Mobile first development
-- [Responsiveness] : Responsiveness and flexibility for any screen size
 - [Linters] : This is a tool used in the project to avoide coding error and professionality
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
