@@ -261,12 +261,15 @@
 
     <!-- form -->
     <form
-        action=""
+        action="https://formspree.io/f/xyyqzgod"
         method="POST"
+        class="flex-column"
       >
       <small>Your name</small>
         <input
           type="text"
+          maxlength = "30"
+          required
         />
       <small>Your email</small>
         <input
@@ -281,6 +284,8 @@
           rows="5"
           placeholder="Enter your message here..."
           class="pry-font"
+          maxlength = "500"
+          required
         ></textarea>
         <button type="submit" id="button" class="pry-font">Start collaboration</button>
       </form>
