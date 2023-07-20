@@ -18,7 +18,6 @@
 }
 
 .flex-column,
-.card,
 .description {
   display: flex;
   flex-direction: column;
@@ -50,18 +49,38 @@
   text-shadow: 1px 4px 6px gray;
 }
 
-.projects h1,
-.about h1 {
-  font-size: 4rem;
-  line-height: 0.3;
+.about h1,
+.form-gp div h1 {
+  color: #1a2236;
+  margin: 3.5rem 0 1.5rem 0;
+  font-size: 6rem;
   font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  margin: 3.5rem 1rem;
 }
 
-.intro p,
 .about p {
+  font-size: 0.8rem;
+}
+
+.intro p {
   font-size: 1.2rem;
+}
+
+.form-gp div p {
+  font-size: small;
+  margin-bottom: 2rem;
+}
+
+small {
+  color: #7d7c84;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.input small,
+input[type='email'] {
+  width: 90%;
+  margin-left: 1.3rem;
 }
 
 #button {
@@ -81,7 +100,7 @@ footer button {
   width: 100%;
   background-color: #1a2236;
   color: #92dcdc;
-  padding: 1.5rem 6rem 0;
+  padding-left: 10rem;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -90,32 +109,32 @@ footer button {
 }
 
 .description button {
-  width: 15rem;
-  background-color: #1a2236;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 0.8rem 1rem;
+  width: 12rem;
+  background-color: #fff;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+  padding: 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: larger;
+  font-size: large;
 }
 
 .about button {
-  width: 100%;
+  width: 58%;
   background-color: #1a2236;
   color: #fff;
   border: 1px solid #fff;
-  padding: 1rem 5rem;
+  padding: 0.5rem 3rem;
   margin-top: 1.5rem;
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 form #button {
-  width: 100%;
-  margin: 0;
+  width: 50%;
+  margin: 2rem auto 0 auto;
 }
 
 #button:hover,
@@ -136,7 +155,6 @@ form #button {
 }
 
 .description {
-  height: 14rem;
   padding: 1.8rem;
   background-color: #1a2236;
   align-items: flex-start;
@@ -144,7 +162,6 @@ form #button {
 
 .description h3 {
   color: #fff;
-  font-weight: 100;
   font-size: 1.6rem;
 }
 
@@ -165,16 +182,12 @@ form #button {
   flex-direction: column;
 }
 
-.about h1 {
-  margin: 3.5rem 0;
-}
-
 footer button svg {
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
 
 .about button svg {
-  margin-left: 1.5rem;
+  margin-left: 1.6rem;
 }
 
 #tools {
@@ -182,15 +195,13 @@ footer button svg {
 }
 
 .set {
-  margin: 1rem;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 3.3rem;
+  padding-left: 2.3rem;
   color: #fff;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.25rem;
   font-weight: 600;
   position: relative;
 }
@@ -214,21 +225,20 @@ footer button svg {
 }
 
 .set h3 {
-  font-size: 1.6rem;
   font-weight: 800;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .set ul li {
   list-style: none;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .set img {
+  width: 5.5rem;
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 7.3rem;
   height: auto;
 }
 
@@ -236,15 +246,11 @@ footer button svg {
   height: 6rem;
 }
 
-form {
-  margin: 1rem;
-}
-
 form input {
   width: 100%;
   border: 1.5px solid #dfdfe0;
-  border-radius: 5px;
-  padding: 1.5rem 0.5rem;
+  border-radius: 3px;
+  padding: 1rem 0.3rem;
   margin-bottom: 1rem;
 }
 
@@ -256,7 +262,7 @@ form textarea {
   width: 100%;
   height: 20vh;
   border: 1.5px solid #dfdfe0;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -266,15 +272,13 @@ form textarea::placeholder {
   font-size: larger;
 }
 
-small {
-  color: #7d7c84;
-}
-
 footer {
   background-color: #1a2236;
 }
 
 .socials {
+  margin-right: 6rem;
+  width: 40%;
   height: 15vh;
   display: flex;
   justify-content: space-around;
@@ -284,4 +288,270 @@ footer {
 .socials img .vector {
   width: 1.3rem;
   height: auto;
+}
+
+@media (width >= 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav {
+    border-bottom: 1px solid #eee;
+  }
+
+  .desk-nav {
+    margin: 0 auto;
+    list-style: none;
+    height: 5rem;
+    width: 30%;
+    align-items: center;
+    font-size: smaller;
+    color: #1a2236;
+    cursor: pointer;
+  }
+
+  .desk-nav li span:hover {
+    border-bottom: 2px solid #1a2236;
+  }
+
+  .section-one {
+    position: relative;
+    margin: 3rem 0 8rem 0;
+  }
+
+  .left {
+    width: 50vw;
+    height: 63vh;
+    margin: 11rem 4rem 0 7rem;
+  }
+
+  .left h1 {
+    font-size: 5.5rem;
+    line-height: 0.1;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-shadow: none;
+    margin-bottom: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .left p {
+    font-size: 0.9rem;
+  }
+
+  .left button {
+    margin-top: 2rem;
+    width: 53%;
+  }
+
+  img {
+    display: flex;
+  }
+
+  .left img {
+    width: 9.4rem;
+    position: absolute;
+    bottom: 0;
+    right: 47.6%;
+  }
+
+  .right {
+    width: 47vw;
+  }
+
+  .card {
+    width: 65%;
+    display: grid;
+  }
+
+  .illu-one {
+    z-index: 1;
+    position: relative;
+  }
+
+  .des-one {
+    z-index: 2;
+  }
+
+  .des-one h3 {
+    font-size: 3.4rem;
+    font-weight: 700;
+  }
+
+  .description ul li {
+    padding: 7px 15px;
+    font-size: large;
+  }
+
+  .btn {
+    margin: 1.5rem 0;
+  }
+
+  .btn svg {
+    color: #1a2236;
+  }
+
+  .first--part {
+    margin-top: 5rem;
+  }
+
+  .first--one {
+    width: 40%;
+    position: relative;
+  }
+
+  .dot {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 0;
+    right: 3%;
+  }
+
+  .project--title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    transform: rotate(270deg);
+    font-size: 6rem;
+    position: absolute;
+    color: #1a2236;
+    bottom: 50%;
+  }
+
+  .first--two {
+    width: 75%;
+    position: relative;
+  }
+
+  .first--two img {
+    align-self: stretch;
+  }
+
+  .first--two .description {
+    height: 62.3%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .second--one {
+    margin-top: 3.5rem;
+    width: 34%;
+    height: auto;
+  }
+
+  .second--two {
+    width: 34%;
+    height: auto;
+  }
+
+  .second--three {
+    width: 32%;
+    position: relative;
+  }
+
+  .second--three img {
+    width: 100%;
+  }
+
+  .second--desc {
+    position: absolute;
+    top: 15%;
+  }
+
+  .second--desc .description {
+    height: 13rem;
+  }
+
+  .third--one {
+    width: 56.3%;
+  }
+
+  .third--two {
+    width: 43.8%;
+    height: min-content;
+    align-self: last baseline;
+  }
+
+  .fourth--one img {
+    width: 12rem;
+    height: auto;
+  }
+
+  .fourth--two {
+    width: 43.9%;
+  }
+
+  .fourth--img {
+    width: 75%;
+  }
+
+  .about-tools {
+    margin: 7.5rem;
+    flex-direction: row-reverse;
+  }
+
+  .about {
+    width: 40%;
+  }
+
+  #tools {
+    width: 52%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .dot--square {
+    position: relative;
+  }
+
+  .dot--square img {
+    width: 12rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .form-gp {
+    width: 38%;
+  }
+
+  .img-gp-one {
+    width: 25%;
+  }
+
+  .img-gp-two {
+    display: flex;
+  }
+
+  .img-gp-one img {
+    width: 13rem;
+  }
+
+  .img-gp-two img {
+    width: 15rem;
+    align-self: flex-end;
+  }
 }
