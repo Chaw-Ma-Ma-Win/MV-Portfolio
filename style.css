@@ -1,299 +1,339 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;500;600;700;800&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.pry-font {
-  font-family: 'Poppins', sans-serif;
-}
-
-.flex-row,
-.description ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.flex-column,
-.description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.navbar {
-  height: 6.3rem;
-  margin-bottom: 2rem;
-}
-
-.nav-icon {
-  display: flex;
-  margin-right: 1.2rem;
-  align-items: center;
-}
-
-.intro {
-  height: 28rem;
-  margin: 2rem 0.9rem;
-  color: #1a2236;
-}
-
-.intro h1 {
-  font-size: 4rem;
-  line-height: 0.3;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  text-shadow: 1px 4px 6px gray;
-}
-
-.about h1,
-.form-gp div h1 {
-  color: #1a2236;
-  margin: 3.5rem 0 1.5rem 0;
-  font-size: 6rem;
-  font-family: 'Playfair Display', serif;
-}
-
-.about p {
-  font-size: 0.8rem;
-}
-
-.intro p {
-  font-size: 1.2rem;
-}
-
-.form-gp div p {
-  font-size: small;
-  margin-bottom: 2rem;
-}
-
-small {
-  color: #7d7c84;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.7rem;
-  margin-bottom: 0.5rem;
-}
-
-.input small,
-input[type='email'] {
-  width: 90%;
-  margin-left: 1.3rem;
-}
-
-#button {
-  padding: 1rem;
-  font-size: large;
-  color: #fff;
-  background-color: #1a2236;
-  border: none;
-}
-
-#button,
-button {
-  cursor: pointer;
-}
-
-footer button {
-  width: 100%;
-  background-color: #1a2236;
-  color: #92dcdc;
-  padding-left: 10rem;
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  margin: 0;
-  border: none;
-}
-
-.description button {
-  width: 12rem;
-  background-color: #fff;
-  color: #1a2236;
-  border: 1px solid #1a2236;
-  padding: 0.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: large;
-}
-
-.about button {
-  width: 58%;
-  background-color: #1a2236;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 0.5rem 3rem;
-  margin-top: 1.5rem;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-}
-
-form #button {
-  width: 50%;
-  margin: 2rem auto 0 auto;
-}
-
-#button:hover,
-.about button:hover {
-  border: 1px solid #1a2236;
-  background-color: #fff;
-  color: #1a2236;
-}
-
-#button:active,
-.about button:active {
-  border: 2px solid #1a2236;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.description {
-  padding: 1.8rem;
-  background-color: #1a2236;
-  align-items: flex-start;
-}
-
-.description h3 {
-  color: #fff;
-  font-size: 1.6rem;
-}
-
-.description ul li {
-  margin-right: 10px;
-  font-size: small;
-  padding: 5px 10px;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  background-color: #98dede;
-  color: black;
-}
-
-.about {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-footer button svg {
-  margin-left: 1.5rem;
-}
-
-.about button svg {
-  margin-left: 1.6rem;
-}
-
-#tools {
-  margin: 2rem 0;
-}
-
-.set {
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 2.3rem;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  position: relative;
-}
-
-.languages {
-  background-color: #1c528a;
-}
-
-.frames {
-  background-color: #e2505c;
-}
-
-.skills {
-  background-color: #febf52;
-}
-
-.tools {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.5rem;
-}
-
-.set h3 {
-  font-weight: 800;
-  margin-bottom: 1.2rem;
-}
-
-.set ul li {
-  list-style: none;
-  line-height: 1.8;
-}
-
-.set img {
-  width: 5.5rem;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: auto;
-}
-
-.contact {
-  height: 6rem;
-}
-
-form input {
-  width: 100%;
-  border: 1.5px solid #dfdfe0;
-  border-radius: 3px;
-  padding: 1rem 0.3rem;
-  margin-bottom: 1rem;
-}
-
-form input:hover {
-  border-color: #1a2236;
-}
-
-form textarea {
-  width: 100%;
-  height: 20vh;
-  border: 1.5px solid #dfdfe0;
-  border-radius: 3px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-form textarea::placeholder {
-  color: #7d7c84;
-  font-size: larger;
-}
-
-footer {
-  background-color: #1a2236;
-}
-
-.socials {
-  margin-right: 6rem;
-  width: 40%;
-  height: 15vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.socials img .vector {
-  width: 1.3rem;
-  height: auto;
-}
-
 @media (width >= 768px) {
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+
+  .pry-font {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .flex-row,
+  .description ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .flex-column,
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar {
+    height: 6.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-icon {
+    display: flex;
+    margin-right: 1.2rem;
+    align-items: center;
+  }
+
+  .intro {
+    height: 28rem;
+    margin: 2rem 0.9rem;
+    color: #1a2236;
+  }
+
+  .intro h1 {
+    font-size: 4rem;
+    line-height: 0.3;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    text-shadow: 1px 4px 6px gray;
+  }
+
+  .left h1 {
+    font-size: 5.5rem;
+    line-height: 0.1;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-shadow: none;
+    margin-bottom: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .left p {
+    font-size: 0.9rem;
+  }
+
+  #button,
+  button {
+    cursor: pointer;
+  }
+
+  footer button {
+    width: 100%;
+    background-color: #1a2236;
+    color: #92dcdc;
+    padding-left: 10rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0;
+    border: none;
+  }
+
+  .left button {
+    margin-top: 2rem;
+    width: 53%;
+  }
+
+  .about h1,
+  .form-gp div h1 {
+    color: #1a2236;
+    margin: 3.5rem 0 1.5rem 0;
+    font-size: 6rem;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .about p {
+    font-size: 0.8rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+  }
+
+  .form-gp div p {
+    font-size: small;
+    margin-bottom: 2rem;
+  }
+
+  small {
+    color: #7d7c84;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .input small,
+  input[type='email'] {
+    width: 90%;
+    margin-left: 1.3rem;
+  }
+
+  #button {
+    padding: 1rem;
+    font-size: large;
+    color: #fff;
+    background-color: #1a2236;
+    border: none;
+  }
+
+  .description button {
+    width: 12rem;
+    background-color: #fff;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+  }
+
+  .about button {
+    width: 58%;
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 3rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  form #button {
+    width: 50%;
+    margin: 2rem auto 0 auto;
+  }
+
+  #button:hover,
+  .about button:hover {
+    border: 1px solid #1a2236;
+    background-color: #fff;
+    color: #1a2236;
+  }
+
+  #button:active,
+  .about button:active {
+    border: 2px solid #1a2236;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    padding: 1.8rem;
+    background-color: #1a2236;
+    align-items: flex-start;
+  }
+
+  .description h3 {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+
+  .description ul li {
+    margin-right: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: #98dede;
+    color: black;
+    padding: 7px 15px;
+    font-size: large;
+  }
+
+  .about {
+    width: 40%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer button svg {
+    margin-left: 1.5rem;
+  }
+
+  .btn svg {
+    color: #1a2236;
+  }
+
+  .about button svg {
+    margin-left: 1.6rem;
+  }
+
+  #tools {
+    margin: 2rem 0;
+    width: 52%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .set {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2.3rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: relative;
+  }
+
+  .languages {
+    background-color: #1c528a;
+  }
+
+  .frames {
+    background-color: #e2505c;
+  }
+
+  .skills {
+    background-color: #febf52;
+  }
+
+  .tools {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .left {
+    width: 50vw;
+    height: 63vh;
+    margin: 11rem 4rem 0 7rem;
+  }
+
+  img {
+    display: flex;
+  }
+
+  .left img {
+    width: 9.4rem;
+    position: absolute;
+    bottom: 0;
+    right: 47.6%;
+  }
+
+  .set h3 {
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+  }
+
+  .set ul li {
+    list-style: none;
+    line-height: 1.8;
+  }
+
+  .set img {
+    width: 5.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+  }
+
+  .contact {
+    height: 6rem;
+  }
+
+  form input {
+    width: 100%;
+    border: 1.5px solid #dfdfe0;
+    border-radius: 3px;
+    padding: 1rem 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  form input:hover {
+    border-color: #1a2236;
+  }
+
+  form textarea {
+    width: 100%;
+    height: 20vh;
+    border: 1.5px solid #dfdfe0;
+    border-radius: 3px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  form textarea::placeholder {
+    color: #7d7c84;
+    font-size: larger;
+  }
+
+  footer {
+    background-color: #1a2236;
+  }
+
+  .socials {
+    margin-right: 6rem;
+    width: 40%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .socials img .vector {
+    width: 1.3rem;
+    height: auto;
   }
 
   .none {
@@ -340,42 +380,6 @@ footer {
     margin: 3rem 0 8rem 0;
   }
 
-  .left {
-    width: 50vw;
-    height: 63vh;
-    margin: 11rem 4rem 0 7rem;
-  }
-
-  .left h1 {
-    font-size: 5.5rem;
-    line-height: 0.1;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    text-shadow: none;
-    margin-bottom: 4rem;
-    letter-spacing: 5px;
-  }
-
-  .left p {
-    font-size: 0.9rem;
-  }
-
-  .left button {
-    margin-top: 2rem;
-    width: 53%;
-  }
-
-  img {
-    display: flex;
-  }
-
-  .left img {
-    width: 9.4rem;
-    position: absolute;
-    bottom: 0;
-    right: 47.6%;
-  }
-
   .right {
     width: 47vw;
   }
@@ -399,17 +403,8 @@ footer {
     font-weight: 700;
   }
 
-  .description ul li {
-    padding: 7px 15px;
-    font-size: large;
-  }
-
   .btn {
     margin: 1.5rem 0;
-  }
-
-  .btn svg {
-    color: #1a2236;
   }
 
   .first--part {
@@ -510,17 +505,6 @@ footer {
   .about-tools {
     margin: 7.5rem;
     flex-direction: row-reverse;
-  }
-
-  .about {
-    width: 40%;
-  }
-
-  #tools {
-    width: 52%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 
   .dot--square {
