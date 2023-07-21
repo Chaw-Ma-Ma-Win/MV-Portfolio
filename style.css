@@ -71,6 +71,23 @@ small {
     margin: 3.5rem 1rem;
   }
 
+  .projects img {
+    transform: scale(1);
+  }
+
+  .set img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 7.3rem;
+    height: auto;
+  }
+
+  .projects img:hover {
+    transition: 0.9s ease-in-out;
+    transform: scale(1.1);
+  }
+
   .intro p,
   .about p {
     font-size: 1.2rem;
@@ -229,14 +246,6 @@ small {
   .set ul li {
     list-style: none;
     line-height: 1.6;
-  }
-
-  .set img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 7.3rem;
-    height: auto;
   }
 
   .contact {
