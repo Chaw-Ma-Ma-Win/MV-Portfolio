@@ -33,9 +33,17 @@ This is the website to show my skills and projects.
 
 - [Content]: World Heritage List
 - [HTML] : This is a Markup Language use to achieve the project
-- [Development] : Mobile first development
-- [Responsiveness] : Responsiveness and flexibility for any screen size
 - [Linters] : This is a tool used in the project to avoide coding error and professionality
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+- [Live Demo Link](https://chaw-ma-ma-win.github.io/MV-Portfolio/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Project Presentation Live Demo <a name="live-demo"></a>
+- [Live Demo Link](https://www.loom.com/share/4afc0b562e484fde807be2174680197b?sid=a53ff1ae-5322-4e92-a7da-a9d3c72714b2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
