@@ -31,6 +31,8 @@ small {
   text-shadow: 1px 4px 6px gray;
 }
 
+/* Mobile */
+
 @media (min-width: 50px) and (max-width: 768px) {
   .desktop-none {
     display: none;
@@ -52,6 +54,7 @@ small {
   }
 
   .navbar {
+    position: relative;
     height: 6.3rem;
     margin-bottom: 1.5rem;
   }
@@ -81,6 +84,26 @@ small {
     bottom: 0;
     width: 7.3rem;
     height: auto;
+  }
+
+  .top img {
+    color: black;
+    width: 80%;
+  }
+
+  footer button svg {
+    margin-left: 15px;
+  }
+
+  .top svg {
+    margin-top: 1.5rem;
+    width: 15%;
+  }
+
+  .bottom img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 
   .projects img:hover {
@@ -193,10 +216,6 @@ small {
     margin: 3.5rem 0;
   }
 
-  footer button svg {
-    margin-left: 15px;
-  }
-
   .about button svg {
     margin-left: 1.5rem;
   }
@@ -297,7 +316,29 @@ small {
     width: 1.3rem;
     height: auto;
   }
+
+  /* Drop-down menu */
+  .mobile-menu {
+    display: none;
+    width: 100%;
+    height: 105%;
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+  }
+
+  .menu ul {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    height: 36vh;
+    text-align: center;
+    font-size: 1.4rem;
+  }
 }
+
+/* Desktop */
 
 @media (width >= 768px) {
   .flex-row,
