@@ -344,14 +344,13 @@ small {
     font-size: 1.4rem;
   }
 
-  .menu ul li a{
+  .menu ul li a {
     color: inherit;
     text-decoration: none;
   }
 }
 
 /* Desktop */
-
 @media (width >= 768px) {
   .flex-row,
   .description ul {
