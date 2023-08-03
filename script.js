@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const body = document.querySelector('body');
 const cross = document.getElementById('cross');
 const popCross = document.getElementById('pop-cross');
@@ -10,12 +11,15 @@ const miniImages = document.getElementsByClassName('mini-slide-img');
 const prevButton = document.querySelector('.slide-btn-prev');
 const nextButton = document.querySelector('.slide-btn-next');
 const track = document.querySelector('.slide-tracker');
-const slides = Array.from(track.children);
 const miniSlides = document.querySelector('.mini-slide');
-const minis = Array.from(miniSlides.children);
+const ul = document.querySelector('.slide-tracker');
+const miniUl = document.querySelector('.mini-slide');
 
 hamburger.addEventListener('click', () => {
   mobileMenu.style.left = '0';
+  mobilePop.style.height = '100%';
+  mobilePop.style.overflow = 'scroll';
+  body.style.overflow = 'hidden';
 });
 cross.addEventListener('click', () => {
   mobileMenu.style.left = '-100%';
@@ -24,6 +28,7 @@ cross.addEventListener('click', () => {
     left: 100,
     behavior: 'smooth',
   });
+  body.style.overflow = 'visible';
 });
 
 popCross.addEventListener('click', () => {
@@ -34,23 +39,7 @@ popCross.addEventListener('click', () => {
     left: 100,
     behavior: 'smooth',
   });
-});
-
-seeProjectButtons.forEach((button) => {
-  if (button.onClick === undefined) {
-    // mobilePop.style.display = 'none';
-    mobilePop.style.left = '-100%';
-    body.style.overflow = 'visible';
-  }
-  button.addEventListener('click', () => {
-    // mobilePop.style.display = 'inline';
-    mobilePop.style.left = '0';
-    window.scroll({
-      top: 0,
-      left: 100,
-      behavior: 'smooth',
-    });
-  });
+  body.style.overflow = 'visible';
 });
 
 document.querySelectorAll('.link').forEach((n) => n.addEventListener('click', () => {
@@ -59,7 +48,7 @@ document.querySelectorAll('.link').forEach((n) => n.addEventListener('click', ()
 const projects = [
   {
     name: 'one',
-    url: 'img/two.png',
+    url: 'img/one.png',
   },
   {
     name: 'two',
@@ -67,19 +56,55 @@ const projects = [
   },
   {
     name: 'three',
-    url: 'img/two.png',
+    url: 'img/three.png',
   },
   {
     name: 'four',
-    url: 'img/two.png',
+    url: 'img/four.png',
   },
 ];
+const data = [projects[0].url, projects[1].url, projects[2].url, projects[3].url];
+for (let i = 0; i < data.length; i++) {
+  const li = document.createElement('li');
+  li.classList.add('slide');
+  const img = document.createElement('img');
+  img.classList.add('slide-img');
+  li.appendChild(img);
+  ul.appendChild(li);
 
-// eslint-disable-next-line no-plusplus
-for (let i = 0; i < images.length; i++) {
-  images[i].setAttribute('src', projects[i].url);
-  miniImages[i].setAttribute('src', projects[i].url);
+  // for minis
+  const miniImg = document.createElement('img');
+  miniImg.classList.add('mini-slide-img');
+  miniUl.appendChild(miniImg);
+  miniUl.firstElementChild.classList.add('active-mini-slide');
+
+  for (let i = 0; i < images.length; i++) {
+    images[i].setAttribute('src', projects[i].url);
+    miniImages[i].setAttribute('src', projects[i].url);
+  }
 }
+
+ul.firstElementChild.classList.add('active');
+
+seeProjectButtons.forEach((button) => {
+  if (button.onClick === undefined) {
+    mobilePop.style.left = '-100%';
+    body.style.overflow = 'visible';
+  }
+  button.addEventListener('click', () => {
+    mobilePop.style.left = '0';
+    window.scroll({
+      top: 0,
+      left: 100,
+      behavior: 'smooth',
+    });
+    mobilePop.style.height = '100%';
+    mobilePop.style.overflow = 'scroll';
+    body.style.overflow = 'hidden';
+  });
+});
+
+const slides = Array.from(track.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
@@ -88,7 +113,6 @@ const setPositions = (slide, index) => {
 };
 
 slides.forEach(setPositions);
-
 const movingSlide = (track, currentSlide, nextSlide) => {
   currentSlide.classList.remove('active');
   nextSlide.classList.add('active');
@@ -130,19 +154,6 @@ nextButton.addEventListener('click', () => {
   const targetMini = currentMini.nextElementSibling;
   const index = slides.findIndex((i) => i === nextImage);
   movingSlide(track, currentImage, nextImage);
-  movingMinis(currentMini, targetMini);
-  hideButton(index);
-});
-
-miniSlides.addEventListener('click', (e) => {
-  const targetMini = e.target.closest('img');
-  if (!targetMini) return;
-  const currentImage = track.querySelector('.active');
-  const currentMini = miniSlides.querySelector('.active-mini-slide');
-  const index = minis.findIndex((i) => i === targetMini);
-  const targetSlide = slides[index];
-
-  movingSlide(track, currentImage, targetSlide);
   movingMinis(currentMini, targetMini);
   hideButton(index);
 });

@@ -52,6 +52,7 @@
 
     <!-- Mobile Popup -->
     <div class="mobile-popup">
+      <div class="layer">
       <svg id="pop-cross" width="23" height="23" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.11259 6.67846L1.4341 0L0 1.43409L6.67849 8.11255L0.225112 14.5659L1.65921 16L8.11259 9.54665L14.341 15.775L15.7751 14.3409L9.54668 8.11255L16.0002 1.65909L14.5661 0.224998L8.11259 6.67846Z" fill="#1A2236"/>
       </svg>
@@ -62,24 +63,16 @@
         <li>JavaScript</li>
       </ul>
       <div class="projects-slide column flex-column">
-        <button class="slide-btn-prev"><svg width="23" height="23" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="slide-btn-prev"><svg width="30" height="30" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8.11366 13.5361L1.83545 7.25792L8.11366 0.979715" stroke="white" stroke-width=""/>
           </svg></button>
       <div class="slide-container">
         <ul class="slide-tracker">
-          <li class="start slide active"><img class="slide-img"></li>
-          <li class="slide"><img class="slide-img"></li>
-          <li class="slide"><img class="slide-img"></li>
-          <li class="final slide"><img class="slide-img"></li>
         </ul>
         <div class="mini-slide row flex-row">
-          <img  alt="" class="active-mini-slide mini-slide-img">
-          <img  alt="" class="mini-slide-img">
-          <img  alt="" class="mini-slide-img">
-          <img  alt="" class="mini-slide-img">
         </div>
       </div>
-      <button class="slide-btn-next"><svg width="23" height="23" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="slide-btn-next"><svg width="30" height="30" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.95519 13.5361L7.2334 7.25792L0.95519 0.979715" stroke="white" stroke-width=""/>
         </svg>
       </button>
@@ -110,6 +103,7 @@
           </button> 
         </div>
     </div>
+  </div>
   </div>
 
     <!-- Desktop Navbar -->
@@ -488,11 +482,11 @@
             <div class="flex-row">
               <div>
                 <small>Your name</small>
-                <input type="text" maxlength="30" required />
+                <input type="text" maxlength="30" required class="name"/>
               </div>
               <div class="input">
                 <small>Your email</small>
-                <input type="email" name="email" required />
+                <input type="email" name="email" required class="email"/>
               </div>
             </div>
             <small>Your message</small>
@@ -505,6 +499,7 @@
               maxlength="500"
               required
             ></textarea>
+            <small class="error"></small>
             <button type="submit" id="button" class="pry-font">
               Start collaboration
             </button>
