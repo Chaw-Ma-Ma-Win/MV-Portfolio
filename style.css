@@ -735,6 +735,7 @@ small {
   .buttons button:hover {
     color: #fff;
     background-color: #1a2236;
+    transition: 0.4s;
 
     .live-svg path {
       fill: #fff;
