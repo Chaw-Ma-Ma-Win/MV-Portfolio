@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -107,6 +107,11 @@ small {
     bottom: 0;
   }
 
+  .mini-slide img {
+    width: 25%;
+    height: auto;
+  }
+
   .projects img:hover {
     transition: 0.9s ease-in-out;
     transform: scale(1.1);
@@ -171,6 +176,30 @@ small {
     margin: 0;
   }
 
+  .projects-slide button {
+    position: absolute;
+    font-size: xx-large;
+    border: none;
+    background: transparent;
+    z-index: 3;
+    top: 30%;
+  }
+
+  .buttons button {
+    width: 80%;
+    background-color: #fff;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    padding: 0.8rem 1rem;
+    margin: 1.6rem auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
+  }
+
   #button:hover,
   .about button:hover {
     border: 1px solid #1a2236;
@@ -194,6 +223,18 @@ small {
     color: #fff;
     font-weight: 100;
     font-size: 1.6rem;
+  }
+
+  .ul li {
+    margin-right: 10px;
+    font-size: small;
+    padding: 5px 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    color: black;
+    border: 1px solid #1a2236;
   }
 
   .description ul li {
@@ -348,10 +389,105 @@ small {
     color: inherit;
     text-decoration: none;
   }
+
+  /* popup */
+
+  .mobile-popup {
+    font-family: 'Poppins', sans-serif;
+    top: 0;
+    position: absolute;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #dfe1e6;
+    color: #1c1a19;
+    width: 100%;
+    z-index: 3;
+  }
+
+  #pop-cross {
+    margin-left: 19rem;
+  }
+
+  .mobile-popup h2 {
+    margin: 1.3rem 0 1.5rem 0;
+  }
+
+  .projects-slide {
+    position: relative;
+    margin: 1.3rem 0;
+  }
+
+  .slide-btn-prev {
+    left: 0;
+  }
+
+  .slide-btn-next {
+    right: 0;
+  }
+
+  .slide {
+    visibility: hidden;
+  }
+
+  .active {
+    visibility: visible;
+  }
+
+  .mini-slide {
+    width: 100%;
+  }
+
+  .slide-tracker {
+    position: relative;
+    height: 27.3vh;
+    list-style-type: none;
+  }
+
+  .slide-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .mini-slide .active-mini-slide {
+    border: 1.5px solid black;
+  }
+
+  .btn-none {
+    display: none;
+  }
+
+  .buttons button:hover {
+    color: #fff;
+    background-color: #1a2236;
+
+    .live-svg path {
+      fill: #fff;
+    }
+
+    .source-svg path {
+      fill: #fff;
+    }
+  }
+
+  .popup-foot p {
+    font-size: 1.3rem;
+  }
+
+  .p {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Desktop */
 @media (width >= 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   .flex-row,
   .description ul {
     display: flex;
@@ -381,23 +517,53 @@ small {
     align-items: center;
   }
 
-  .left h1 {
-    font-size: 5.5rem;
-    line-height: 0.1;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    text-shadow: none;
-    margin-bottom: 4rem;
-    letter-spacing: 5px;
+  /* Desktop popup */
+
+  .mobile-popup {
+    font-family: 'Poppins', sans-serif;
+    top: 0;
+    position: absolute;
+    padding: 1.5rem 3rem;
+    background-color: #fff;
+    color: #1c1a19;
+    width: 100%;
+    height: 250%;
+    z-index: 3;
+    border: 3rem solid #1a2236;
   }
 
-  .left p {
-    font-size: 0.9rem;
-  }
-
-  #button,
-  button {
+  #pop-cross {
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
     cursor: pointer;
+  }
+
+  .mobile-popup h2 {
+    font-size: 3rem;
+    color: #1a2236;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .ul {
+    width: 36.5%;
+  }
+
+  .ul li {
+    margin-right: 10px;
+    font-size: medium;
+    padding: 5px 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    color: black;
+    border: 1px solid #1a2236;
+  }
+
+  .projects-slide {
+    position: relative;
+    margin: 1.7rem 0;
   }
 
   footer button {
@@ -412,9 +578,205 @@ small {
     border: none;
   }
 
+  .projects-slide button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    z-index: 3;
+    top: 40%;
+  }
+
+  .slide-btn-prev {
+    left: 0;
+  }
+
+  .slide-btn-next {
+    right: 0;
+  }
+
+  footer button svg {
+    margin-left: 1.5rem;
+  }
+
+  .slide-btn-next svg,
+  .slide-btn-prev svg {
+    stroke-width: 0.8;
+    width: 4rem;
+    height: auto;
+  }
+
+  .slide {
+    visibility: hidden;
+  }
+
+  .slide-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .active {
+    visibility: visible;
+  }
+
+  .mini-slide {
+    width: 100%;
+  }
+
+  img {
+    display: flex;
+  }
+
+  .mini-slide img {
+    z-index: 4;
+    width: 25%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .slide-tracker {
+    position: relative;
+    height: 97.6vh;
+    list-style-type: none;
+  }
+
+  .mini-slide .active-mini-slide {
+    border: 1.2px solid black;
+  }
+
+  .btn-none {
+    display: none;
+  }
+
+  .popup-foot {
+    width: 55%;
+    margin: 3.5rem auto;
+  }
+
+  .popup-foot p {
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .buttons button {
+    width: 40%;
+    background-color: #fff;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    padding: 0.8rem 1rem;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
+  }
+
+  .btns button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #1a2236;
+    font-family: 'Poppins', serif;
+    font-weight: 300;
+  }
+
   .left button {
     margin-top: 2rem;
     width: 53%;
+  }
+
+  .description button {
+    width: 12rem;
+    background-color: #fff;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    cursor: pointer;
+  }
+
+  .about button {
+    width: 58%;
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 3rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .description button:hover {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid #fff;
+
+    .desk-btn-svg path {
+      fill: #fff;
+    }
+  }
+
+  .buttons button:hover {
+    color: #fff;
+    background-color: #1a2236;
+
+    .live-svg path {
+      fill: #fff;
+    }
+
+    .source-svg path {
+      fill: #fff;
+    }
+  }
+
+  .slide-btn-prev svg {
+    width: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .slide-btn-next svg {
+    width: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .slide-btn-prev a,
+  .slide-btn-next a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
+  /* popend */
+
+  .left h1 {
+    font-size: 5.5rem;
+    line-height: 0.1;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-shadow: none;
+    margin-bottom: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .left p {
+    font-size: 0.9rem;
   }
 
   .about h1,
@@ -450,30 +812,6 @@ small {
     color: #fff;
     background-color: #1a2236;
     border: none;
-  }
-
-  .description button {
-    width: 12rem;
-    background-color: #fff;
-    color: #1a2236;
-    border: 1px solid #1a2236;
-    padding: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: large;
-  }
-
-  .about button {
-    width: 58%;
-    background-color: #1a2236;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 0.5rem 3rem;
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
   }
 
   form #button {
@@ -520,10 +858,6 @@ small {
     margin: 1rem;
     display: flex;
     flex-direction: column;
-  }
-
-  footer button svg {
-    margin-left: 1.5rem;
   }
 
   .btn svg {
@@ -576,10 +910,6 @@ small {
     width: 50vw;
     height: 63vh;
     margin: 11rem 4rem 0 7rem;
-  }
-
-  img {
-    display: flex;
   }
 
   .left img {
