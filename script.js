@@ -22,6 +22,10 @@ const liveButton = document.querySelector('.live');
 const sourceButton = document.querySelector('.source');
 const aTag = document.querySelector('.live-a');
 const sourceTag = document.querySelector('.source-a');
+const form = document.querySelector('#form');
+const formName = document.querySelector('.name');
+const formEmail = document.querySelector('.email');
+const formError = document.querySelector('.error');
 
 hamburger.addEventListener('click', () => {
   mobileMenu.style.left = '0';
@@ -314,4 +318,22 @@ nextProject.addEventListener('click', () => {
   movingTitle(titles, currentTitle, nextTitle);
   movingMinis(currentMini, targetMini);
   hideProject(index);
+});
+
+form.addEventListener('submit', (e) => {
+  const message = [];
+
+  if (formName.value === '') {
+    message.push('Please enter your name');
+    e.preventDefault();
+  }
+  if (formEmail.value !== formEmail.value.toLowerCase()) {
+    message.push('Please enter a valid email address');
+    e.preventDefault();
+  }
+
+  if (message.length > 0) {
+    e.preventDefault();
+    formError.innerText = message.join(',');
+  }
 });
