@@ -74,6 +74,12 @@ a {
   color: inherit;
 }
 
+.fail {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(197, 36, 36);
+  margin-top: 1rem;
+}
+
 /* Mobile */
 
 @media (min-width: 50px) and (max-width: 768px) {
