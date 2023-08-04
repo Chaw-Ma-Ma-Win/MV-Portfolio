@@ -327,7 +327,7 @@ form.addEventListener('submit', (e) => {
     message.push('Please enter your name');
     e.preventDefault();
   }
-  if (formEmail.value !== formEmail.value.toLowerCase()) {
+  if (formEmail.value !== formEmail.value.toLowerCase() || formEmail.value.toUpperCase()) {
     message.push('Please enter a valid email address');
     e.preventDefault();
   }

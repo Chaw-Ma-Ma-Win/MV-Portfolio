@@ -78,6 +78,7 @@ a {
   font-family: 'Poppins', sans-serif;
   color: rgb(197, 36, 36);
   margin-top: 1rem;
+  display: none;
 }
 
 /* Mobile */
