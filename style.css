@@ -32,6 +32,40 @@ small {
   text-shadow: 1px 4px 6px gray;
 }
 
+.paragraph {
+  display: none;
+  visibility: hidden;
+}
+
+.title {
+  visibility: hidden;
+  position: absolute;
+}
+
+.active,
+.active-title {
+  visibility: visible;
+}
+
+.active-paragraph {
+  visibility: visible;
+  display: contents;
+}
+
+.btn-none {
+  opacity: 0;
+}
+
+.names {
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Mobile */
 
 @media (min-width: 50px) and (max-width: 768px) {
@@ -192,9 +226,6 @@ small {
     border: 1px solid #1a2236;
     padding: 0.8rem 1rem;
     margin: 1.6rem auto 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-size: 1rem;
     font-family: 'Poppins', serif;
     font-weight: 500;
@@ -408,9 +439,10 @@ small {
     margin-left: 19rem;
   }
 
+  /*
   .mobile-popup h2 {
     margin: 1.3rem 0 1.5rem 0;
-  }
+  } */
 
   .projects-slide {
     position: relative;
@@ -453,10 +485,6 @@ small {
 
   .mini-slide .active-mini-slide {
     border: 1.5px solid black;
-  }
-
-  .btn-none {
-    display: none;
   }
 
   .buttons button:hover {
@@ -620,12 +648,24 @@ small {
     object-fit: cover;
   }
 
-  .active {
+  .textarea {
+    height: 30vh;
+    position: relative;
+  }
+
+  .active,
+  .active-paragraph,
+  .active-title {
     visibility: visible;
   }
 
   .mini-slide {
     width: 100%;
+  }
+
+  .names {
+    display: inline-block;
+    margin-bottom: 5.5rem;
   }
 
   img {
@@ -674,9 +714,6 @@ small {
     border: 1px solid #1a2236;
     padding: 0.8rem 1rem;
     margin-right: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-size: 1rem;
     font-family: 'Poppins', serif;
     font-weight: 500;
@@ -693,6 +730,7 @@ small {
     color: #1a2236;
     font-family: 'Poppins', serif;
     font-weight: 300;
+    cursor: pointer;
   }
 
   .left button {
