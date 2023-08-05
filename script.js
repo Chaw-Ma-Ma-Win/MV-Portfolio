@@ -337,7 +337,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     formError.innerText = message.join(',');
   }
-
+  //Get a reference to the form and its elements e.g (const formfield  = document.getElementById('form')). You have set your data in the localstorage and forgotten to getItem on execution.
   const storeData = {
     name: formName.value,
     email: formEmail.value,
