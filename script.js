@@ -25,6 +25,7 @@ const sourceTag = document.querySelector('.source-a');
 const form = document.querySelector('#form');
 const formName = document.querySelector('.name');
 const formEmail = document.querySelector('.email');
+const formMessage = document.querySelector('.message');
 const formError = document.querySelector('.error');
 
 hamburger.addEventListener('click', () => {
@@ -336,4 +337,15 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     formError.innerText = message.join(',');
   }
+
+  const storeData = {
+    name: formName.value,
+    email: formEmail.value,
+    texts: formMessage.value,
+  };
+
+  JSON.stringify(storeData);
+  localStorage.setItem('Name', storeData.name);
+  localStorage.setItem('Email', storeData.email);
+  localStorage.setItem('Message', JSON.stringify(storeData.texts));
 });
