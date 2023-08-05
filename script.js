@@ -24,6 +24,9 @@ const aTag = document.querySelector('.live-a');
 const sourceTag = document.querySelector('.source-a');
 const form = document.querySelector('#form');
 const formName = document.querySelector('.name');
+const inputName = document.querySelector('#name');
+const inputEmail = document.querySelector('#email');
+const inputMessage = document.querySelector('#message');
 const formEmail = document.querySelector('.email');
 const formMessage = document.querySelector('.message');
 const formError = document.querySelector('.error');
@@ -337,12 +340,18 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     formError.innerText = message.join(',');
   }
-  //Get a reference to the form and its elements e.g (const formfield  = document.getElementById('form')). You have set your data in the localstorage and forgotten to getItem on execution.
   const storeData = {
     name: formName.value,
     email: formEmail.value,
     texts: formMessage.value,
   };
+
+  if (localStorage.getItem('storeData')) {
+    JSON.parse(localStorage.getItem('storeData'));
+    inputName.value = storeData.name;
+    inputEmail.value = storeData.email;
+    inputMessage.value = storeData.texts;
+  }
 
   JSON.stringify(storeData);
   localStorage.setItem('Name', storeData.name);
